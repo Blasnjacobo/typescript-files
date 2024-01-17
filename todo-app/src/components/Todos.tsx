@@ -1,5 +1,5 @@
 import React from 'react'
-import { type ListOfTodos, TodoId, type Todo as TodoType } from '../types'
+import { type ListOfTodos, TodoId, type Todo as TodoType } from '../types/types'
 import { Todo } from './Todo'
 
 interface Props {

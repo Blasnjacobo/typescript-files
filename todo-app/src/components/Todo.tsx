@@ -1,5 +1,5 @@
 import React from 'react'
-import { type Todo as TodoType, type TodoId } from '../types'
+import { type Todo as TodoType, type TodoId } from '../types/types'
 
 interface Props extends TodoType {
     onRemoveTodo: ({ id }: TodoId) => void
