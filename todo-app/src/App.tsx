@@ -9,22 +9,26 @@ const mockTodos = [
   {
     id: '1',
     title: 'Conseguir trabajo',
-    completed: true
+    completed: false
   },
   {
     id: '2',
     title: 'Bailar macarena',
-    completed: false
+    completed: true
   },
   {
     id: '3',
     title: 'Trabajar',
     completed: false
+  },
+  {
+    id: '4',
+    title: 'Appp en pantalla de bloqueo',
+    completed: false
   }
 ]
 
 const App = () => {
-  // eslint-disable-next-line no-unused-vars
   const [todos, setTodos] = useState(mockTodos)
   const [filterSelected, setFilterSelected] = useState<FilterValue>(TODO_FILTERS.ALL)
 
@@ -32,7 +36,6 @@ const App = () => {
     const newTodos = todos.filter(todo => todo.id !== id)
     setTodos(newTodos)
   }
-  // eslint-disable-next-line no-unused-vars
   const handleCompleted = ({ id, completed }: Pick<TodoType, 'id' | 'completed'>
   ) : void => {
     const newTodos = todos.map(todo => {
